@@ -42,6 +42,7 @@ class EWEB_Bridge_Updater {
 		$current_version = defined('EWEB_EB_VERSION') ? EWEB_EB_VERSION : '0.0.0';
 
 
+
 		if ( $remote ) {
 			$remote_ver = $remote->tag_name;
 			$remote_ver = preg_replace( '/^v/', '', $remote_ver ); // Robustness: Strip 'v' 
