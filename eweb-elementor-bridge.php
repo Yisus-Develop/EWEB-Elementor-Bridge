@@ -1,6 +1,8 @@
+<?php
+/**
  * Plugin Name: EWEB Elementor Bridge (V10.12)
  * Description: [CORE] Unified Industrial Engine.
- * Version: 10.12.0
+ * Version: 10.13.2
  * Author: Yisus Dev
  * Primary Branch: main
  */
