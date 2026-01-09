@@ -41,14 +41,20 @@ class EWEB_Bridge_Updater {
 		// Use defined constant for version if available, otherwise fallback
 		$current_version = defined('EWEB_EB_VERSION') ? EWEB_EB_VERSION : '0.0.0';
 
-		if ( $remote && version_compare( $current_version, $remote->tag_name, '<' ) ) {
-			$obj = new stdClass();
-			$obj->slug = 'eweb-elementor-bridge'; // Must match directory name usually
-			$obj->new_version = $remote->tag_name;
-			$obj->url = 'https://github.com/' . $this->github_user . '/' . $this->github_repo;
-			$obj->package = $remote->zipball_url;
 
-			$transient->response[ $this->plugin_slug ] = $obj;
+		if ( $remote ) {
+			$remote_ver = $remote->tag_name;
+			$remote_ver = preg_replace( '/^v/', '', $remote_ver ); // Robustness: Strip 'v' 
+
+			if ( version_compare( $current_version, $remote_ver, '<' ) ) {
+				$obj = new stdClass();
+				$obj->slug = 'eweb-elementor-bridge';
+				$obj->new_version = $remote->tag_name;
+				$obj->url = 'https://github.com/' . $this->github_user . '/' . $this->github_repo;
+				$obj->package = $remote->zipball_url;
+
+				$transient->response[ $this->plugin_slug ] = $obj;
+			}
 		}
 
 		return $transient;
