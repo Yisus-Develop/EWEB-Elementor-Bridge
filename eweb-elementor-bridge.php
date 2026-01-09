@@ -2,7 +2,6 @@
  * Description: [CORE] Unified Industrial Engine.
  * Version: 10.12.0
  * Author: Yisus Dev
- * GitHub Plugin URI: Yisus-Develop/EWEB-Elementor-Bridge
  * Primary Branch: main
  */
 
