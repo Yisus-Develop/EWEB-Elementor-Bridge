@@ -1,9 +1,9 @@
-<?php
-/**
- * Plugin Name: EWEB Elementor Bridge (V10.11)
+ * Plugin Name: EWEB Elementor Bridge (V10.12)
  * Description: [CORE] Unified Industrial Engine.
- * Version: 10.11.0
+ * Version: 10.12.0
  * Author: Yisus Dev
+ * GitHub Plugin URI: Yisus-Develop/EWEB-Elementor-Bridge
+ * Primary Branch: main
  */
 
 if (!defined('ABSPATH')) exit;
