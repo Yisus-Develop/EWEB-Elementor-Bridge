@@ -7,9 +7,16 @@
 
 if (!defined('ABSPATH')) exit;
 
-/**
- * AUTO-LOADER (The Clean Way)
- */
+defined('EWEB_EB_VERSION') or define('EWEB_EB_VERSION', '10.12.0');
+defined('EWEB_EB_PATH') or define('EWEB_EB_PATH', plugin_dir_path(__FILE__));
+
+// 1. Load Custom Updater
+if (is_admin()) {
+    require_once EWEB_EB_PATH . 'includes/class-eweb-bridge-updater.php';
+    new EWEB_Bridge_Updater(__FILE__, 'Yisus-Develop', 'EWEB-Elementor-Bridge');
+}
+
+// 2. Load Widgets (Autoloader V2)
 function cps_v10_register_unified_widgets($widgets_manager) {
     $widgets_dir = __DIR__ . '/widgets/';
     
