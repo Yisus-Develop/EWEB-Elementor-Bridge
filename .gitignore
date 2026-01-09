@@ -1,0 +1,51 @@
+# System & OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+
+# Dependencies
+node_modules/
+vendor/
+
+# Logs & Debug
+*.log
+debug.log
+error_log
+php_error.log
+
+# Temporary / Diagnostic Scripts (Ignored to keep repo clean)
+temp/
+tmp/
+*.tmp
+verify-*.php
+test-*.php
+debug-*.php
+restore-*.php
+migrate-*.php
+sync-*.php
+inject-*.php
+force-purge*.php
+find-home*.php
+check-*.php
+syntax-*.php
+rescue-*.php
+*.bak
+*.old
+
+# WordPress specific (if working inside a WP install, though this is a project folder)
+wp-config.php
+wp-content/uploads/
+
+# Build folders
+dist/
+build/
+
+# AI Artifacts (Optional - usually we keep docs, but ignore heavy generation temps)
+.gemini/
